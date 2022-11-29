@@ -18,7 +18,8 @@ const connectDB = async () => {
 connectDB();
 
 const app = express();
-app.use(bodyParser.urlencoded({ extended: true }));
+// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json())
 app.use(express.static("public"));
 
 app.use("/api/auth", authRouter);
