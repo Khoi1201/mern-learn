@@ -4,6 +4,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const authRouter = require("./routes/auth");
+const postRouter = require("./routes/post");
 
 const connectDB = async () => {
   try {
@@ -18,13 +19,14 @@ const connectDB = async () => {
 connectDB();
 
 const app = express();
-// app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.json())
+app.use(express.json());
 app.use(express.static("public"));
 
 app.use("/api/auth", authRouter);
+app.use("/api/posts", postRouter);
+
 app.get("/", (req, res) => res.send("Hello world"));
 
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => console.log("Server started on port " + PORT));

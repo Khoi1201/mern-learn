@@ -2,8 +2,8 @@ POST http://localhost:5000/api/auth/register
 Content-Type: application/json
 
 {
-  "username": "khoi3",
-  "password": "1234"
+  "username": "ruler",
+  "password": "relur"
 }
 
 ###
@@ -12,6 +12,41 @@ POST http://localhost:5000/api/auth/login
 Content-Type: application/json
 
 {
-  "username": "khoi3",
-  "password": "1234"
+  "username": "ruler",
+  "password": "relur"
 }
+
+###
+POST http://localhost:5000/api/posts
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwN2MyODgwNWM5NjE2OTU3YThhMmYiLCJpYXQiOjE2NzA0MTcxODJ9.27cphQzqRQEuals78_MOFX6RtqqbTr2BvmrRM10aJ6o
+
+{
+  "title":"first skin as Jhin",
+  "description": "Jhin R with ruler",
+  "url": "league of legend . exe",
+  "status": "DONE"
+}
+
+###
+GET http://localhost:5000/api/posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwN2MyODgwNWM5NjE2OTU3YThhMmYiLCJpYXQiOjE2NzA2NzQ5MDh9.s3i1LC777EZgzGGalf6aWYpAgNIyMiKiBglm-qnqP6I
+
+###
+
+PUT http://localhost:5000/api/posts/63907c86805c9616957a8a31
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwN2MyODgwNWM5NjE2OTU3YThhMmYiLCJpYXQiOjE2NzA1NTgzNTR9.WxXiOsucgdBdDHQ4rl-a7zi92DbNA25hlwI2n3puOww
+
+{
+  "title":"Vue",
+  "description":"VUEEEE",
+  "url": "vue.org",
+  "status": "DOING"  
+}
+
+###
+
+DELETE http://localhost:5000/api/posts/63908b2c0be7197b657e1013
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2MzkwN2MyODgwNWM5NjE2OTU3YThhMmYiLCJpYXQiOjE2NzA2NzQ5MDh9.s3i1LC777EZgzGGalf6aWYpAgNIyMiKiBglm-qnqP6I

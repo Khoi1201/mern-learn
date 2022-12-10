@@ -13,7 +13,6 @@ const User = require("../models/User");
 // talk with database need to use async
 router.post("/register", async (req, res) => {
   const { username, password } = req.body;
-  console.log(req.body);
   // simple validation
   if (!username || !password)
     return res
